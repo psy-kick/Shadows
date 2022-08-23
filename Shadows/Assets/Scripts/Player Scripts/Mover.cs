@@ -100,6 +100,10 @@ public class Mover : MonoBehaviour
         {
             Jump();
         }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+
+        }
     }
 
     private void Jump()
