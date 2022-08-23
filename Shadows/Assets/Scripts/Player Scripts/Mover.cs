@@ -36,6 +36,8 @@ public class Mover : MonoBehaviour
     private void UpdateAnimations()
     {
         anim.SetBool("isWalking", isWalking);
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("yVelocity", rb.velocity.y);
     }
 
     private void CheckIfcanJump()
