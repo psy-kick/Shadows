@@ -79,7 +79,10 @@ public class ShadowMover : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
-            player.GetComponent<Mover>().enabled = true;
+            if (!player)
+            {
+                player.GetComponentInParent<Mover>().enabled = true;
+            }
             Destroy(this.gameObject);
         }
     }

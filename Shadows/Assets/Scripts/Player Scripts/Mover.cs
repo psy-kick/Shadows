@@ -108,6 +108,7 @@ public class Mover : MonoBehaviour
             isInAstral = true;
             StartCoroutine(AstralDelayAnim(anim.GetCurrentAnimatorStateInfo(0).length));
             Instantiate(Shadow);
+            this.enabled = true;
         }
         else
         {
