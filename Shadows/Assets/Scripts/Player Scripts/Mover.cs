@@ -105,10 +105,12 @@ public class Mover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             isInAstral = true;
+            StartCoroutine(AstralDelayAnim(anim.GetCurrentAnimatorStateInfo(0).length));
         }
-        else
+        else if (Input.GetKeyDown(KeyCode.C))
         {
             isInAstral = false;
+            StopCoroutine(AstralDelayAnim(0));
         }
     }
     private void Jump()
@@ -126,5 +128,9 @@ public class Mover : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(GroundCheck.position, GroundCheckRadius);
+    }
+    IEnumerator AstralDelayAnim(float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
     }
 }
