@@ -17,6 +17,7 @@ public class Mover : MonoBehaviour
     bool canJump;
     bool isWalking;
     Animator anim;
+    bool isInAstral;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class Mover : MonoBehaviour
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetBool("Astral", isInAstral);
     }
 
     private void CheckIfcanJump()
@@ -102,10 +104,13 @@ public class Mover : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-
+            isInAstral = true;
+        }
+        else
+        {
+            isInAstral = false;
         }
     }
-
     private void Jump()
     {
         if(canJump)

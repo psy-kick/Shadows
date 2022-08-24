@@ -29240,6 +29240,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+Shadow-Mechanics
 --- !u!1 &1974908087
 GameObject:
   m_ObjectHideFlags: 0
@@ -29565,6 +29566,7 @@ Transform:
   m_Father: {fileID: 376551631}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+main
 --- !u!1001 &4038009017010515222
 PrefabInstance:
   m_ObjectHideFlags: 0
