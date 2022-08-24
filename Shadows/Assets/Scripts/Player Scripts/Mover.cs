@@ -18,6 +18,7 @@ public class Mover : MonoBehaviour
     bool isWalking;
     Animator anim;
     bool isInAstral;
+    public GameObject Shadow;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,8 +107,9 @@ public class Mover : MonoBehaviour
         {
             isInAstral = true;
             StartCoroutine(AstralDelayAnim(anim.GetCurrentAnimatorStateInfo(0).length));
+            Instantiate(Shadow);
         }
-        else if (Input.GetKeyDown(KeyCode.C))
+        else
         {
             isInAstral = false;
             StopCoroutine(AstralDelayAnim(0));
