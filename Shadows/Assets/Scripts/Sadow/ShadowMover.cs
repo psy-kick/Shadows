@@ -12,6 +12,7 @@ public class ShadowMover : MonoBehaviour
     Rigidbody2D s_rb;
     Animator anim;
     private bool s_isWalking;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +79,7 @@ public class ShadowMover : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
+            player.GetComponent<Mover>().enabled = true;
             Destroy(this.gameObject);
         }
     }
