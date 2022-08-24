@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  JumpForce: 17
+  JumpForce: 20
   GroundCheck: {fileID: 2173845358881425751}
   GroundCheckRadius: 0.5
   GroundLayer:
@@ -200,9 +200,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07079458, y: -1.02587}
+  m_Offset: {x: -0.07079458, y: -1.0116354}
   serializedVersion: 2
-  m_Radius: 0.99541605
+  m_Radius: 0.9811815
 --- !u!95 &824466657486282722
 Animator:
   serializedVersion: 4
