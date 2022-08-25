@@ -13,12 +13,15 @@ public class ShadowMover : MonoBehaviour
     Animator anim;
     private bool s_isWalking;
     public GameObject player;
+    public Mover moverscript;
 
     // Start is called before the first frame update
     void Start()
     {
         s_rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        moverscript = player.GetComponent<Mover>();
     }
 
     // Update is called once per frame
@@ -27,7 +30,7 @@ public class ShadowMover : MonoBehaviour
         s_CheckInput();
         s_CheckDirection();
         s_UpdateAnimations();
-        s_spoof();
+        s_poof();
     }
     private void FixedUpdate()
     {
@@ -75,15 +78,21 @@ public class ShadowMover : MonoBehaviour
     {
         s_rb.velocity = new Vector2(s_speed * s_MovementInputDirectionX, s_speed * s_MovementInputDirectionY);
     }
-    private void s_spoof()
+    private void s_poof()
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
-            if (!player)
+            anim.SetTrigger("isHuman");
+            if (player!=null)
             {
-                player.GetComponentInParent<Mover>().enabled = true;
+                moverscript.enabled = true;
             }
-            Destroy(this.gameObject);
+            else
+            {
+                player = GameObject.FindGameObjectWithTag("Player");
+                moverscript = player.GetComponent<Mover>();
+            }
+            Destroy(this.gameObject,0.5f);
         }
     }
 }

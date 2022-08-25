@@ -15,7 +15,7 @@ public class Mover : MonoBehaviour
     public LayerMask GroundLayer;
     bool isGrounded;
     bool canJump;
-    bool isWalking;
+    public bool isWalking;
     Animator anim;
     bool isInAstral;
     public GameObject Shadow;
@@ -106,16 +106,20 @@ public class Mover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             isInAstral = true;
-            StartCoroutine(AstralDelayAnim(anim.GetCurrentAnimatorStateInfo(0).length));
-            Instantiate(Shadow);
-            this.enabled = true;
+            Invoke("SpawnShadow", 0.3f);
+            this.enabled = false;
         }
         else
         {
             isInAstral = false;
-            StopCoroutine(AstralDelayAnim(0));
         }
     }
+
+    private void SpawnShadow()
+    {
+        Instantiate(Shadow);
+    }
+
     private void Jump()
     {
         if(canJump)
@@ -131,9 +135,5 @@ public class Mover : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(GroundCheck.position, GroundCheckRadius);
-    }
-    IEnumerator AstralDelayAnim(float delay = 0f)
-    {
-        yield return new WaitForSeconds(delay);
     }
 }

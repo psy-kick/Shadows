@@ -165,7 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s_speed: 10
-  player: {fileID: 9037084326220273778, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+  player: {fileID: 0}
+  moverscript: {fileID: 0}
 --- !u!95 &1122074544534411620
 Animator:
   serializedVersion: 4
