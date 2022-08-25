@@ -16,9 +16,12 @@ public class Mover : MonoBehaviour
     bool isGrounded;
     bool canJump;
     public bool isWalking;
-    Animator anim;
+    [HideInInspector]
+    public Animator anim;
     bool isInAstral;
     public GameObject Shadow;
+    [HideInInspector]
+    public static Mover instance;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,10 +106,10 @@ public class Mover : MonoBehaviour
         {
             Jump();
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && isGrounded && isInAstral==false)
         {
             isInAstral = true;
-            Invoke("SpawnShadow", 0.3f);
+            Invoke("SpawnShadow",0);
             this.enabled = false;
         }
         else
@@ -135,5 +138,13 @@ public class Mover : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(GroundCheck.position, GroundCheckRadius);
+    }
+    public void Deactivate()
+    {
+        isInAstral = true;
+    }
+    public void Activate()
+    {
+        isInAstral = false;
     }
 }
