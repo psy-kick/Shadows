@@ -22,6 +22,7 @@ public class ShadowMover : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         moverscript = player.GetComponent<Mover>();
+        s_isFacingRight = moverscript.isFacingRight;
     }
 
     // Update is called once per frame
