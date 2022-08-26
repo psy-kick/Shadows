@@ -8,6 +8,7 @@ public class Mover : MonoBehaviour
     float MovementInputDirection;
     Rigidbody2D rb;
     public float speed=5f;
+    [HideInInspector]
     public bool isFacingRight = true;
     public float JumpForce = 60f;
     public Transform GroundCheck;
