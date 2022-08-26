@@ -194,4 +194,8 @@ public class Mover : MonoBehaviour
     {
         canFlip = true;
     }
+    public void p_Levers(GameObject selectedAsset)
+    {
+        selectedAsset.SetActive(false);
+    }
 }

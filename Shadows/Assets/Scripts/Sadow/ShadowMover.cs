@@ -10,7 +10,7 @@ public class ShadowMover : MonoBehaviour
     private float s_MovementInputDirectionX;
     private float s_MovementInputDirectionY;
     Rigidbody2D s_rb;
-    Animator anim;
+    public Animator anim;
     private bool s_isWalking;
     public GameObject player;
     public Mover moverscript;
@@ -95,5 +95,15 @@ public class ShadowMover : MonoBehaviour
             }
             Destroy(this.gameObject,0.5f);
         }
+    }
+    public void Die()
+    {
+        anim.SetTrigger("isHuman");
+        moverscript.enabled = true;
+        Destroy(this.gameObject, 0.5f);
+    }
+    public void s_Levers(GameObject selectedAsset)
+    {
+        selectedAsset.SetActive(false);
     }
 }

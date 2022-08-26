@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 1667252}
   - component: {fileID: 1667251}
   - component: {fileID: 1667253}
+  - component: {fileID: 1667254}
   m_Layer: 0
-  m_Name: Light 2D (2)
+  m_Name: HallLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,6 +252,18 @@ CircleCollider2D:
   m_Offset: {x: 0.17283693, y: 0.8262529}
   serializedVersion: 2
   m_Radius: 5.448687
+--- !u!114 &1667254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd1edb8f15f01f488187d7d6d4a3b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &51634256
 GameObject:
   m_ObjectHideFlags: 0
@@ -27800,8 +27813,9 @@ GameObject:
   - component: {fileID: 736168170}
   - component: {fileID: 736168169}
   - component: {fileID: 736168171}
+  - component: {fileID: 736168172}
   m_Layer: 0
-  m_Name: Light 2D (4)
+  m_Name: ExitLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27917,6 +27931,18 @@ CircleCollider2D:
   m_Offset: {x: 0.9336894, y: -0.800726}
   serializedVersion: 2
   m_Radius: 4.665122
+--- !u!114 &736168172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736168168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1064161a807365429362858dd4e3888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &739174296
 GameObject:
   m_ObjectHideFlags: 0
@@ -28505,6 +28531,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &891416671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 597688533333265190, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
+  m_PrefabInstance: {fileID: 597688532300653869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &891416676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891416671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc70a4afcc8c4e40934fb7262f944a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LibraryLight: {fileID: 0}
 --- !u!1 &963808703
 GameObject:
   m_ObjectHideFlags: 0
@@ -28908,13 +28952,14 @@ GameObject:
   - component: {fileID: 1063849928}
   - component: {fileID: 1063849927}
   - component: {fileID: 1063849929}
+  - component: {fileID: 1063849930}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: BathroomLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1063849927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29042,6 +29087,18 @@ PolygonCollider2D:
       - {x: 5.0962477, y: 0.027988017}
       - {x: 5.35781, y: 2.5914705}
       - {x: 3.3952804, y: 2.7855923}
+--- !u!114 &1063849930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063849926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b539f393854f5084693b9ab17216cbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1168944811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30253,8 +30310,9 @@ GameObject:
   - component: {fileID: 1785385945}
   - component: {fileID: 1785385944}
   - component: {fileID: 1785385946}
+  - component: {fileID: 1785385947}
   m_Layer: 0
-  m_Name: Light 2D (3)
+  m_Name: LibraryLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30384,6 +30442,18 @@ PolygonCollider2D:
       - {x: -5.649251, y: -0.4240656}
       - {x: 5.3307114, y: -0.35762584}
       - {x: 4.5828753, y: 2.6688628}
+--- !u!114 &1785385947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785385943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901e75332f138749a3ccfaf3323ff1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1793978879
 GameObject:
   m_ObjectHideFlags: 0
@@ -31713,7 +31783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 576877640396777014, guid: 58138183999191241b3158bb8ed810ca, type: 3}
       propertyPath: m_Name
-      value: SwitchOffn (2)
+      value: BathroomSwitch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58138183999191241b3158bb8ed810ca, type: 3}
@@ -31770,7 +31840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 597688533333265190, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
       propertyPath: m_Name
-      value: Levers_0
+      value: BathroomLever
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
@@ -31791,7 +31861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038009017139571663, guid: 92fb906041f259f4793216d733fdf836, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.05
+      value: -18.03
       objectReference: {fileID: 0}
     - target: {fileID: 4038009017139571663, guid: 92fb906041f259f4793216d733fdf836, type: 3}
       propertyPath: m_LocalPosition.y
