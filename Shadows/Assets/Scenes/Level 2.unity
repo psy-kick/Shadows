@@ -126802,6 +126802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4038009017139571662, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4038009017139571663, guid: 92fb906041f259f4793216d733fdf836, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -126849,6 +126853,18 @@ PrefabInstance:
     - target: {fileID: 4068867305015924130, guid: 92fb906041f259f4793216d733fdf836, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399045814588965959, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6154216996532810975, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862324573291066235, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+      propertyPath: m_Intensity
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92fb906041f259f4793216d733fdf836, type: 3}
