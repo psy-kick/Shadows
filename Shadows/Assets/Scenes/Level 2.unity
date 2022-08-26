@@ -129270,6 +129270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812627889}
   - component: {fileID: 1812627888}
+  - component: {fileID: 1812627890}
   m_Layer: 0
   m_Name: Light 2D (6)
   m_TagString: Untagged
@@ -129371,6 +129372,38 @@ Transform:
   m_Father: {fileID: 488361906}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -178.928}
+--- !u!60 &1812627890
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812627887}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.0773306, y: 11.619991}
+      - {x: 3.5312824, y: 12.142586}
+      - {x: -1.73571, y: 8.272041}
+      - {x: -2.8521135, y: 2.8040762}
+      - {x: -0.39570546, y: -0.66970694}
+      - {x: 0.39128083, y: -0.06280291}
+      - {x: 7.7626286, y: 7.978796}
 --- !u!1 &1817479989
 GameObject:
   m_ObjectHideFlags: 0
