@@ -26,6 +26,7 @@ public class Mover : MonoBehaviour
     public Transform ShadowSpawner;
     public bool canWalk;
     public bool canFlip;
+    bool isTakingCigBreak = true;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -53,6 +54,7 @@ public class Mover : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("Astral", isInAstral);
+        anim.SetBool("isSmoking", isTakingCigBreak);
     }
 
     private void CheckIfcanJump()
@@ -111,11 +113,11 @@ public class Mover : MonoBehaviour
     private void CheckInput()
     {
         MovementInputDirection = Input.GetAxis("Horizontal");
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
-        if (Input.GetKeyDown(KeyCode.X) && isGrounded && isInAstral==false)
+        if (Input.GetKeyDown(KeyCode.X) && isGrounded && isInAstral == false)
         {
             isInAstral = true;
             SpawnShadow();
@@ -124,6 +126,19 @@ public class Mover : MonoBehaviour
         else
         {
             isInAstral = false;
+        }
+        CigBreak();
+    }
+
+    private void CigBreak()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && isGrounded && isTakingCigBreak == false)
+        {
+            isTakingCigBreak = true;
+        }
+        else
+        {
+            isTakingCigBreak = false;
         }
     }
 
