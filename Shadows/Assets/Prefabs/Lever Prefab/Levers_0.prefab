@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 597688533333265187}
   - component: {fileID: 597688533333265184}
   - component: {fileID: 597688533333265185}
+  - component: {fileID: 9197221699612606632}
   m_Layer: 0
   m_Name: Levers_0
   m_TagString: Untagged
@@ -217,3 +218,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &9197221699612606632
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597688533333265190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06589317, y: 0.03489554}
+  serializedVersion: 2
+  m_Radius: 0.81488144
