@@ -8,21 +8,34 @@ public class Mover : MonoBehaviour
     float MovementInputDirection;
     Rigidbody2D rb;
     public float speed=5f;
-    bool isFacingRight = true;
+    [HideInInspector]
+    public bool isFacingRight = true;
     public float JumpForce = 60f;
     public Transform GroundCheck;
     public float GroundCheckRadius;
     public LayerMask GroundLayer;
     bool isGrounded;
     bool canJump;
-    bool isWalking;
-    Animator anim;
+    public bool isWalking;
+    [HideInInspector]
+    public Animator anim;
     bool isInAstral;
+    public GameObject Shadow;
+    [HideInInspector]
+    public static Mover instance;
+    public Transform ShadowSpawner;
+    public bool canWalk;
+    public bool canFlip;
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        canWalk = true;
+        canFlip = true;
     }
 
     // Update is called once per frame
@@ -56,11 +69,11 @@ public class Mover : MonoBehaviour
 
     private void CheckDirection()
     {
-        if (isFacingRight && MovementInputDirection < 0)
+        if (isFacingRight && MovementInputDirection < 0 && canFlip)
         {
             Flip();
         }
-        else if (!isFacingRight && MovementInputDirection > 0)
+        else if (!isFacingRight && MovementInputDirection > 0 && canFlip)
         {
             Flip();
         }
@@ -102,15 +115,31 @@ public class Mover : MonoBehaviour
         {
             Jump();
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && isGrounded && isInAstral==false)
         {
             isInAstral = true;
+            SpawnShadow();
+            this.enabled = false;
         }
         else
         {
             isInAstral = false;
         }
     }
+
+    private void SpawnShadow()
+    {
+        GameObject s_Shadow = Instantiate(Shadow,ShadowSpawner);
+        if(gameObject.transform.rotation.y==180)
+        {
+            s_Shadow.GetComponent<SpriteRenderer>().flipY = true;
+        }
+        else
+        {
+            s_Shadow.GetComponent<SpriteRenderer>().flipY = false;
+        }
+    }
+
     private void Jump()
     {
         if(canJump)
@@ -121,10 +150,33 @@ public class Mover : MonoBehaviour
 
     private void ApplyMovement()
     {
-        rb.velocity = new Vector2(speed*MovementInputDirection,rb.velocity.y);
+        if(canWalk)
+        {
+            rb.velocity = new Vector2(speed*MovementInputDirection,rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(GroundCheck.position, GroundCheckRadius);
+    }
+    public void Deactivate()
+    {
+        canWalk = false;
+    }
+    public void Activate()
+    {
+        canWalk = true;
+    }
+    public void DeactivateFlip()
+    {
+        canFlip = false;
+    }
+    public void ActivateFlip()
+    {
+        canFlip = true;
     }
 }
