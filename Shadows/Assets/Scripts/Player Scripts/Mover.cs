@@ -37,6 +37,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         rb = GetComponent<Rigidbody2D>();
         canWalk = true;
         canFlip = true;
