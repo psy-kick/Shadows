@@ -29200,7 +29200,6 @@ GameObject:
   - component: {fileID: 1063849928}
   - component: {fileID: 1063849927}
   - component: {fileID: 1063849929}
-  - component: {fileID: 1063849930}
   - component: {fileID: 1063849931}
   m_Layer: 0
   m_Name: BathroomLight
@@ -29336,18 +29335,6 @@ PolygonCollider2D:
       - {x: 5.0962477, y: 0.027988017}
       - {x: 5.35781, y: 2.5914705}
       - {x: 3.3952804, y: 2.7855923}
---- !u!114 &1063849930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063849926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1275579029a90e418f9281f4dc3c38c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1063849931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30295,6 +30282,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1707569292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 576877640396777014, guid: 58138183999191241b3158bb8ed810ca, type: 3}
+  m_PrefabInstance: {fileID: 576877639719347198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707569293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707569292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccb26dc6e1f7624eb6a427919b125de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BathroomSwitch: {fileID: 1063849926}
 --- !u!1 &1709995980
 GameObject:
   m_ObjectHideFlags: 0

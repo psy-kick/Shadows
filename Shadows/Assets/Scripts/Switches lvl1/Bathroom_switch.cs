@@ -5,22 +5,30 @@ using UnityEngine;
 public class Bathroom_switch : MonoBehaviour
 {
     public GameObject BathroomSwitch;
-    private void Start()
+    bool canInteract;
+    Mover player;
+    private void Update()
     {
-        BathroomSwitch = GameObject.Find("BathroomSwitch");
+        if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        {
+            player.p_Levers(BathroomSwitch);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        player = collision.GetComponent<Mover>();
+        if (player == null)
+        {
+            canInteract = false;
+        }
         if (collision.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Mover Player = collision.GetComponent<Mover>();
-                if (Player != null)
-                {
-                    Player.p_Levers(BathroomSwitch);
-                }
-            }
+            canInteract = true;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        canInteract = false;
+    }
+
 }
