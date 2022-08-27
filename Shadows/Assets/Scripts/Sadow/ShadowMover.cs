@@ -93,14 +93,14 @@ public class ShadowMover : MonoBehaviour
                 player = GameObject.FindGameObjectWithTag("Player");
                 moverscript = player.GetComponent<Mover>();
             }
-            Destroy(this.gameObject,0.5f);
+            Destroy(this.gameObject);
         }
     }
     public void Die()
     {
         anim.SetTrigger("isHuman");
         moverscript.enabled = true;
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject,0.1f);
     }
     public void s_Levers(GameObject selectedAsset)
     {
