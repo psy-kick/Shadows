@@ -30,5 +30,4 @@ public class Bathroom_switch : MonoBehaviour
     {
         canInteract = false;
     }
-
 }
