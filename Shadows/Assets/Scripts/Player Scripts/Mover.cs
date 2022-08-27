@@ -41,6 +41,10 @@ public class Mover : MonoBehaviour
         canWalk = true;
         canFlip = true;
         respawnPoint = Spawner.transform.position;
+        if(Spawner==null)
+        {
+            Debug.Log("Ignore");
+        }
     }
 
     // Update is called once per frame
