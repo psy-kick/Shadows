@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
 
     public void Credits ()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void BackToMenu()
