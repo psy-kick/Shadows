@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1122074544534411620}
   m_Layer: 0
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: Shadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s_speed: 10
+  anim: {fileID: 0}
   player: {fileID: 0}
   moverscript: {fileID: 0}
 --- !u!95 &1122074544534411620

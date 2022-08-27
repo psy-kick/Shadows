@@ -27,6 +27,9 @@ public class Mover : MonoBehaviour
     public bool canWalk;
     public bool canFlip;
     bool isTakingCigBreak = true;
+    private Vector3 respawnPoint;
+    public Transform Spawner;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -37,6 +40,7 @@ public class Mover : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         canWalk = true;
         canFlip = true;
+        respawnPoint = Spawner.transform.position;
     }
 
     // Update is called once per frame
@@ -193,5 +197,16 @@ public class Mover : MonoBehaviour
     public void ActivateFlip()
     {
         canFlip = true;
+    }
+    public void p_Levers(GameObject selectedAsset)
+    {
+        selectedAsset.SetActive(false);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag=="Deadzone")
+        {
+            transform.position = respawnPoint;
+        }
     }
 }
