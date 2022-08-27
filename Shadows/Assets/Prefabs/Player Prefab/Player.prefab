@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   isFacingRight: 1
-  JumpForce: 25
+  JumpForce: 20
   GroundCheck: {fileID: 2173845358881425751}
   GroundCheckRadius: 0.5
   GroundLayer:
