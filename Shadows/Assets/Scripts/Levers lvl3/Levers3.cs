@@ -5,8 +5,10 @@ using UnityEngine;
 public class Levers3 : MonoBehaviour
 {
     public GameObject TrapDoor;
+    public GameObject Lever;
     bool canInteract;
     public string LeversAnim;
+    public string LeversAnimfordoors;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
@@ -28,5 +30,6 @@ public class Levers3 : MonoBehaviour
     void GetAnimators()
     {
         TrapDoor.GetComponent<Animator>().SetTrigger(LeversAnim);
+        Lever.GetComponent<Animator>().SetTrigger(LeversAnimfordoors);
     }
 }
