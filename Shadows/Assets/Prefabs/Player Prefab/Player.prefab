@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   isFacingRight: 1
-  JumpForce: 20
+  JumpForce: 25
   GroundCheck: {fileID: 2173845358881425751}
   GroundCheckRadius: 0.5
   GroundLayer:
@@ -261,6 +261,7 @@ MonoBehaviour:
   ShadowSpawner: {fileID: 1135738219}
   canWalk: 0
   canFlip: 0
+  Spawner: {fileID: 0}
 --- !u!212 &4068867305015924130
 SpriteRenderer:
   m_ObjectHideFlags: 0
