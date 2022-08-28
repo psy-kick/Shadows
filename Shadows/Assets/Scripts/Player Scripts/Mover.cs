@@ -29,6 +29,8 @@ public class Mover : MonoBehaviour
     bool isTakingCigBreak = true;
     private Vector3 respawnPoint;
     public Transform Spawner;
+    public AudioClip cigAudio;
+    public AudioSource walkAudio;
 
     private void Awake()
     {
@@ -144,6 +146,7 @@ public class Mover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && isGrounded && isTakingCigBreak == false)
         {
             isTakingCigBreak = true;
+            AudioSource.PlayClipAtPoint(cigAudio,transform.position,5f);
         }
         else
         {
@@ -212,6 +215,17 @@ public class Mover : MonoBehaviour
         if(collision.tag=="Deadzone")
         {
             transform.position = respawnPoint;
+        }
+    }
+    public void PlayWalkSound()
+    {
+        if(canWalk)
+        {
+            walkAudio.Play();
+        }
+        else
+        {
+            walkAudio.Stop();
         }
     }
 }

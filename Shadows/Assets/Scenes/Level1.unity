@@ -488,6 +488,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1376018467}
     - target: {fileID: 222135769, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
+      propertyPath: trapAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b5fe1b69bd0614cb6c5cf06e9c4beb, type: 3}
+    - target: {fileID: 222135769, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
       propertyPath: LeversAnim
       value: openDoor
       objectReference: {fileID: 0}
@@ -30039,6 +30043,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5180428453585224612, guid: 2e2fc44a3b544a740a4d572a0a6e25ec, type: 3}
   m_PrefabInstance: {fileID: 5180428453635400215}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1397128499 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2500784898743558967, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+  m_PrefabInstance: {fileID: 4038009017010515222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1521578084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 597688533333265190, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
@@ -31550,6 +31559,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1838704074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5146478555542217074, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_Name
+      value: BGMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217075, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d8483ddc79509dd43a43fc4bc7e4a416, type: 3}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
 --- !u!1 &1857200818
 GameObject:
   m_ObjectHideFlags: 0
@@ -32765,6 +32835,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 781395105}
     - target: {fileID: 222135769, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
+      propertyPath: trapAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b5fe1b69bd0614cb6c5cf06e9c4beb, type: 3}
+    - target: {fileID: 222135769, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
       propertyPath: LeversAnim
       value: LibraryDoor
       objectReference: {fileID: 0}
@@ -32934,6 +33008,10 @@ PrefabInstance:
       propertyPath: Spawner
       value: 
       objectReference: {fileID: 1522831240}
+    - target: {fileID: 9037084326220273778, guid: 92fb906041f259f4793216d733fdf836, type: 3}
+      propertyPath: walkAudio
+      value: 
+      objectReference: {fileID: 1397128499}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92fb906041f259f4793216d733fdf836, type: 3}
 --- !u!1001 &5180428453635400215

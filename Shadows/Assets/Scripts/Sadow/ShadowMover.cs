@@ -15,6 +15,7 @@ public class ShadowMover : MonoBehaviour
     public GameObject player;
     public Mover moverscript;
     bool canMove = true;
+    public AudioClip poofAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -109,6 +110,7 @@ public class ShadowMover : MonoBehaviour
                 player = GameObject.FindGameObjectWithTag("Player");
                 moverscript = player.GetComponent<Mover>();
             }
+            AudioSource.PlayClipAtPoint(poofAudio, transform.position, 5f);
             Destroy(this.gameObject,0.5f);
         }
     }
@@ -116,6 +118,7 @@ public class ShadowMover : MonoBehaviour
     {
         anim.SetTrigger("isHuman");
         moverscript.enabled = true;
+        AudioSource.PlayClipAtPoint(poofAudio, transform.position, 5f);
         Destroy(this.gameObject);
     }
     public void s_Levers(GameObject selectedAsset)

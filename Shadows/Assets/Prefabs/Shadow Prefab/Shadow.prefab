@@ -168,6 +168,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   player: {fileID: 0}
   moverscript: {fileID: 0}
+  poofAudio: {fileID: 8300000, guid: e1b87c099560a234e92b5fdca3b20758, type: 3}
 --- !u!95 &1122074544534411620
 Animator:
   serializedVersion: 4

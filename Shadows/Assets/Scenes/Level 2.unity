@@ -124482,6 +124482,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1111911602}
     - target: {fileID: 222135769, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
+      propertyPath: trapAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b5fe1b69bd0614cb6c5cf06e9c4beb, type: 3}
+    - target: {fileID: 222135769, guid: 0a31672b285f5d040ab0f768c1b04eb3, type: 3}
       propertyPath: LeversAnim
       value: LibraryDoor
       objectReference: {fileID: 0}
@@ -126855,6 +126859,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843164f25b390ae4dab361fa8a938709, type: 3}
+--- !u!1001 &1062873314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5146478555542217074, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_Name
+      value: BGMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217075, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5798deb90e5536749847db68a856e222, type: 3}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146478555542217084, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa90724a4beb30c4dad5cab79d295acb, type: 3}
 --- !u!1 &1080563434
 GameObject:
   m_ObjectHideFlags: 0
@@ -128177,7 +128242,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22060585, y: 0.032800674}
+  m_Offset: {x: -0.030683994, y: 0.032800674}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -128188,7 +128253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.496912, y: 1.0656013}
+  m_Size: {x: 8.117068, y: 1.0656013}
   m_EdgeRadius: 0
 --- !u!23 &1368464495
 MeshRenderer:
