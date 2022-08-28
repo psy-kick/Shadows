@@ -14,6 +14,7 @@ public class ShadowMover : MonoBehaviour
     private bool s_isWalking;
     public GameObject player;
     public Mover moverscript;
+    bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -77,7 +78,22 @@ public class ShadowMover : MonoBehaviour
     }
     private void s_ApplyMovement()
     {
-        s_rb.velocity = new Vector2(s_speed * s_MovementInputDirectionX, s_speed * s_MovementInputDirectionY);
+        if(canMove)
+        {
+            s_rb.velocity = new Vector2(s_speed * s_MovementInputDirectionX, s_speed * s_MovementInputDirectionY);
+        }
+        else
+        {
+            canMove = false;
+        }
+    }
+    public void DeactivateMove()
+    {
+        canMove = false;
+    }
+    public void ActivateMove()
+    {
+        canMove = true;
     }
     private void s_poof()
     {
@@ -93,14 +109,14 @@ public class ShadowMover : MonoBehaviour
                 player = GameObject.FindGameObjectWithTag("Player");
                 moverscript = player.GetComponent<Mover>();
             }
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,0.5f);
         }
     }
     public void Die()
     {
         anim.SetTrigger("isHuman");
         moverscript.enabled = true;
-        Destroy(this.gameObject,0.1f);
+        Destroy(this.gameObject);
     }
     public void s_Levers(GameObject selectedAsset)
     {
